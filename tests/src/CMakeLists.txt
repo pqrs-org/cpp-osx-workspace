@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 add_compile_options(-Wall)
 add_compile_options(-Werror)
 add_compile_options(-O2)
+add_compile_options(-fobjc-arc)
 
 include_directories(${CMAKE_CURRENT_LIST_DIR}/../../include)
 include_directories(SYSTEM ${CMAKE_CURRENT_LIST_DIR}/../vendor/include)

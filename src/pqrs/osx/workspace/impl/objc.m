@@ -5,6 +5,10 @@
 #import <Cocoa/Cocoa.h>
 #import <pqrs/osx/workspace/impl/objc.h>
 
+#if !__has_feature(objc_arc)
+#error "You have to add -fobjc-arc into compile options"
+#endif
+
 char* pqrs_osx_workspace_find_application_url_by_bundle_identifier(const char* bundle_identifier) {
   if (bundle_identifier == nil) {
     return nil;
