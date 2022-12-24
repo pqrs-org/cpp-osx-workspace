@@ -1,6 +1,6 @@
 #pragma once
 
-// pqrs::osx::workspace v1.0
+// pqrs::osx::workspace v1.1
 
 // (C) Copyright Takayama Fumihiko 2022.
 // Distributed under the Boost Software License, Version 1.0.
