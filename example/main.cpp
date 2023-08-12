@@ -9,7 +9,7 @@ int main(void) {
             << pqrs::osx::workspace::find_application_url_by_bundle_identifier("com.apple.Safari") << std::endl;
 
   std::cout << "Karabiner-Elements: "
-            << pqrs::osx::workspace::find_application_url_by_bundle_identifier("org.pqrs.Karabiner-Elements.Preferences") << std::endl;
+            << pqrs::osx::workspace::find_application_url_by_bundle_identifier("org.pqrs.Karabiner-Elements.Settings") << std::endl;
 
   std::cout << "NotFound: "
             << pqrs::osx::workspace::find_application_url_by_bundle_identifier("org.pqrs.NotFound") << std::endl;
