@@ -18,7 +18,7 @@ cget install pqrs-org/cpp-osx-workspace
 
 And then configure your project as follows:
 
-- Add `cget/src/PQRSOSXWorkspaceImpl.swift`
+- Add `cget/src/pqrs/osx/workspace/PQRSOSXWorkspaceImpl.swift`
 - Add `cget/include/pqrs/osx/workspace/impl/Bridging-Header.h` as Bridging Header.
 
 ### Manual install
@@ -27,5 +27,5 @@ Copy `include/pqrs` directory into your include directory.
 
 And then configure your project as follows:
 
-- Add `src/PQRSOSXWorkspaceImpl.swift`
+- Add `src/pqrs/osx/workspace/PQRSOSXWorkspaceImpl.swift`
 - Add `include/pqrs/osx/workspace/impl/Bridging-Header.h` as Bridging Header.
