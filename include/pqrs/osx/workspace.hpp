@@ -31,6 +31,14 @@ inline std::string find_application_url_by_bundle_identifier(const std::string& 
   return buffer;
 }
 
+inline bool application_running_by_bundle_identifier(const std::string& bundle_identifier) {
+  return pqrs_osx_workspace_application_running_by_bundle_identifier(bundle_identifier.c_str());
+}
+
+inline bool application_running_by_file_path(const std::string& file_path) {
+  return pqrs_osx_workspace_application_running_by_file_path(file_path.c_str());
+}
+
 } // namespace workspace
 } // namespace osx
 } // namespace pqrs

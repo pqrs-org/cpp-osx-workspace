@@ -18,6 +18,9 @@ int main(void) {
   pqrs::osx::workspace::open_application_by_bundle_identifier("com.apple.Safari");
   pqrs::osx::workspace::open_application_by_file_path("/System/Applications/Utilities/Activity Monitor.app");
 
+  std::cout << pqrs::osx::workspace::application_running_by_bundle_identifier("com.apple.Safari") << std::endl;
+  std::cout << pqrs::osx::workspace::application_running_by_file_path("/System/Applications/Utilities/Activity Monitor.app") << std::endl;
+
   // Wait open_application_*
   sleep(1);
 
