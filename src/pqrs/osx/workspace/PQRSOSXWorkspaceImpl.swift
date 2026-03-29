@@ -91,9 +91,16 @@ func pqrs_osx_workspace_application_running_by_file_path(
   _ filePathPtr: UnsafePointer<Int8>
 ) -> Bool {
   let filePath = String(cString: filePathPtr)
-
   let url = URL(filePath: filePath, directoryHint: .checkFileSystem, relativeTo: nil)
-  return NSWorkspace.shared.runningApplications.contains {
-    $0.bundleURL == url
+
+  // NSRunningApplication.runningApplications may return a stale list of applications rather than the current processes,
+  // so it needs to be queried with withBundleIdentifier.
+  if let bundleIdentifier = Bundle(url: url)?.bundleIdentifier {
+    return NSRunningApplication.runningApplications(withBundleIdentifier: bundleIdentifier).contains
+    {
+      $0.bundleURL == url
+    }
   }
+
+  return false
 }
