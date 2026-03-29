@@ -19,16 +19,16 @@ int main(void) {
                                                               pqrs::osx::workspace::open_configuration{
                                                                   .activates = false,
                                                               });
-  pqrs::osx::workspace::open_application_by_file_path("/System/Applications/Utilities/Activity Monitor.app");
+  pqrs::osx::workspace::open_application_by_bundle_path("/System/Applications/Utilities/Activity Monitor.app");
 
-  // pqrs::osx::workspace::open_application_by_file_path(
+  // pqrs::osx::workspace::open_application_by_bundle_path(
   //     "/Library/Application Support/org.pqrs/Karabiner-Elements/Karabiner-Updater.app",
   //     pqrs::osx::workspace::open_configuration{
   //         .arguments = {"checkForUpdatesWithBetaVersion"},
   //     });
 
   std::cout << pqrs::osx::workspace::application_running_by_bundle_identifier("com.apple.Safari") << std::endl;
-  std::cout << pqrs::osx::workspace::application_running_by_file_path("/System/Applications/Utilities/Activity Monitor.app") << std::endl;
+  std::cout << pqrs::osx::workspace::application_running_by_bundle_path("/System/Applications/Utilities/Activity Monitor.app") << std::endl;
 
   // Wait open_application_*
   sleep(1);

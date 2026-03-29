@@ -46,8 +46,8 @@ func pqrs_osx_workspace_open_application_by_bundle_identifier(
   }
 }
 
-@_cdecl("pqrs_osx_workspace_open_application_by_file_path")
-func pqrs_osx_workspace_open_application_by_file_path(
+@_cdecl("pqrs_osx_workspace_open_application_by_bundle_path")
+func pqrs_osx_workspace_open_application_by_bundle_path(
   _ filePathPtr: UnsafePointer<Int8>,
   _ openConfiguration: UnsafePointer<pqrs_osx_workspace_open_configuration>
 ) {
@@ -86,8 +86,8 @@ func pqrs_osx_workspace_application_running_by_bundle_identifier(
   return !NSRunningApplication.runningApplications(withBundleIdentifier: bundleIdentifier).isEmpty
 }
 
-@_cdecl("pqrs_osx_workspace_application_running_by_file_path")
-func pqrs_osx_workspace_application_running_by_file_path(
+@_cdecl("pqrs_osx_workspace_application_running_by_bundle_path")
+func pqrs_osx_workspace_application_running_by_bundle_path(
   _ filePathPtr: UnsafePointer<Int8>
 ) -> Bool {
   let filePath = String(cString: filePathPtr)
