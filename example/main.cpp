@@ -2,7 +2,7 @@
 #include <pqrs/osx/workspace.hpp>
 #include <unistd.h>
 
-int main(void) {
+int main() {
   std::cout << "Finder: "
             << pqrs::osx::workspace::find_application_url_by_bundle_identifier("com.apple.Finder") << std::endl;
 
