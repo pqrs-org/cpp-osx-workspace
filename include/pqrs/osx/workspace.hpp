@@ -13,12 +13,12 @@
 namespace pqrs::osx::workspace {
 
 struct open_configuration final {
-  bool activates = true;
-  bool adds_to_recent_items = true;
-  bool allows_running_application_substitution = true;
-  bool creates_new_application_instance = false;
-  bool hides = false;
-  bool hides_others = false;
+  bool activates{true};
+  bool adds_to_recent_items{true};
+  bool allows_running_application_substitution{true};
+  bool creates_new_application_instance{false};
+  bool hides{false};
+  bool hides_others{false};
   std::vector<std::string> arguments;
   // All data members must be public to use designated initializers,
   // so even the temporary variable for the `c_struct` method is exposed as public.
